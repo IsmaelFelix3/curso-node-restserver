@@ -13,15 +13,16 @@ const usuariosGet = (req = request, res = response) => {
     });
 }
 
-const usuariosPost = (req, res = response) => {
+const usuariosPost = (req = request, res = response) => {
+
+    console.log(req);
 
     const { nombre, edad } = req.body;
 
     res.json({
         msg: 'Post Api - Controlador',
         nombre,
-        edad,
-        q
+        edad
     })
 }
 
